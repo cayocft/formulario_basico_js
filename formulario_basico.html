@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registrate</h1>
+    <label for="">Nombre</label>
+    <input type="text" name="nombre"><br>
+    <label for="">Apellido</label>
+    <input type="text" name="apellido"><br>
+    <label for="">Email</label>
+    <input type="text" name="email"><br>
+    <label for="">Password</label>
+    <input type="text" name="password"><br>
+    <button onclick="registrar()">Registrate</button>
+    <script>
+        
+        function registrar(){
+            var nombre = document.getElementsByName('nombre')[0].value;
+            var apellido = document.getElementsByName('apellido')[0].value;
+            var email = document.getElementsByName('email')[0].value;
+            var password = document.getElementsByName('password')[0].value;
+            console.log("El nombre ingresado es: "+nombre);
+            console.log("El apellido ingresado es: "+apellido);
+            console.log("El email ingresado es: "+email);
+            console.log("El password ingresado es: "+password);
+
+        }
+
+    </script>
+</body>
+</html>
