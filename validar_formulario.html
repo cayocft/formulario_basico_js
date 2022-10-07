@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <label for="">Edad</label>
+    <input type="text" name="edad">
+    <label for="" id="validar_edad"></label>
+    <br>
+    <button onclick="validar_datos()">Enviar</button>
+    <script>
+        function validar_datos(){
+            var edad = document.getElementsByName('edad')[0].value;
+            var validar_edad = document.getElementById('validar_edad');
+            if(isNaN(edad)){
+                validar_edad.innerHTML = "ERROR. Debes ingresar un número";
+            }else{
+                edad = parseInt(edad);
+                if(edad >= 0){
+                    validar_edad.innerHTML = "VALIDADO!!";
+                }else{
+                    validar_edad.innerHTML = "Debes ingresar un número mayor que 0";
+                }
+
+                
+            }
+        }
+    </script>
+</body>
+</html>
